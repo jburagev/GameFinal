@@ -615,7 +615,7 @@ function CreateScene() {
             if (merged.length == bane.loadedMeshes.length - 1 && mergedFinal == false) {
                 mergedFinal = true;
                 timer.destroyTimer();
-                $("#fire-button").html(' <button  type="button" class="btn" id="fire-button">' + fireButtonLabel + '</button>')
+                $("#modal-help-body").html(' <button  type="button" class="btn" id="fire-button">' + fireButtonLabel + '</button>')
                 $("#helpModal").modal({
                     backdrop: false,
                     keyboard: true,
