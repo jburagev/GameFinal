@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta title="Game">
+    <title>Sestavi Top</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="vendor/videojs/video-js.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/tether/tether.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="vendor/videojs/videojs-ie8.min.js"></script>
+    <script src="vendor/videojs/video.js"></script>
+    <script src="vendor/babylon.custom.js"></script>
+    <script src="js/script.js"></script>
+
+    <script src="js/hand.js"></script>
+
+
+</head>
+<style>
+    #main-modal {
+        /* Width */
+        max-width: 100%;
+        width: auto !important;
+        display: inline-block;
+        left: 60%
+    }
+    
+    .modal-backdrop.show {
+        opacity: 0;
+    }
+</style>
+
+<body class="lang-en">
+    <!-- Modal -->
+    <div class="modal" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p style="font-size: 1em;">Nastalo v okviru predmeta Interaktivnost in oblikovanje informacij pod mentorstvom prof. dr. Franca Soline in viš. pred. dr. Boruta Batagelja</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- HELP MODAL-->
+    <!-- Modal -->
+    <!--<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Pomoč</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+                </div>
+                <div class="modal-body">
+                    Vsebina navodil ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zapri</button>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- Navigation -->
+    <nav class="navbar fixed-top  navbar-inverse bg-inverse">
+        <div class="container">
+            <div class="float-left">
+                <h3 id="title-main">Sestavi Top</h3>
+            </div>
+            <div class="float-right">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Jezik / Language
+						</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item btn-slo" data-lang="slo" href="#">SLO</a>
+                        <a class="dropdown-item btn-en" data-lang="en" href="#">ENG</a>
+                    </div>
+                </div>
+
+                <button class="btn" type="button" id="firstmodal" data-toggle="modal" data-target="#myModal">
+						?
+					</button>
+
+            </div>
+
+
+        </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="align-self-center" style="height:87% !important;">
+        <div class="container center_content_wrapper">
+            <div class="row center-content">
+                <div class="col-sm-6">
+                    <img src="images/ziva.jpg" class="img-fluid" />
+                </div>
+                <div class="col-sm-6 align-self-center text-center lang lang-slo">
+
+                    <a href="#" class="btn start-game-btn">Začni igro</a>
+
+                </div>
+                <div class="col-sm-6 align-self-center text-center lang lang-en">
+
+                    <a href="#" class="btn start-game-btn">Start game</a>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="canvas_wrapper hidden">
+            <div id="firevideo" style="display:none; width:100%; height:100%; margin-left: 17%;    margin-top: 3%;">
+                <video id="fire_animation" class="video-js" controls preload="auto" width="960" height="540" data-setup='{"controls": false}'>
+			    <source src='' type='video/mp4' id="mp4Source1">							
+	        </video>
+            </div>
+            <canvas id="game" style="width:100% !important; height:100% !important; touch-action:none;">
+
+			
+            </canvas>
+
+            <div id="helpModal" class="modal" style="width:auto; left:50 !important;">
+                <div class="modal-dialog" id="main-modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Help</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+
+                        </div>
+                        <div class="modal-body" style="text-align:center;">
+                            <video id="help_animation" class="video-js" controls preload="auto" width="350px" height="280px" data-setup='{"controls": false}'>
+						<source src="" type='video/mp4' id="mp4Source">
+							
+					</video>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="close-btn" class="btn btn-default" data-dismiss="modal">Zapri</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+
+        </div>
+    </div>
+
+    <footer style="width:100% !important;height:10% !important;">
+        <nav class="navbar fixed-bottom navbar-inverse bg-inverse">
+            <div class="container text-right">
+                <a class="btn btn-warning float-left" href="index.html" style="z-index:1000 !important;"> <i class="fa fa-power-off" aria-hidden="true"></i> <span id="reset-btn-label">Reset</span></a>
+                IOI - Jovan Buragev @ FRI, UNI LJ - 2017
+            </div>
+        </nav>
+    </footer>
+
+
+</body>
+
+</html>

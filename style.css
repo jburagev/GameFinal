@@ -1,0 +1,108 @@
+/**
+Theme colors
+*/
+html{
+
+    overflow-y:hidden; 
+}
+body {
+    background: #fff;
+}
+
+nav.bg-inverse {
+    background-color: #A39161 !important;
+}
+
+.navbar-inverse .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar {
+    color: #fff;
+}
+
+.btn {
+    background-color: #A39161;
+    color: #fff;
+}
+
+p {
+    font-size: 2em;
+}
+
+.navbar .btn {
+    background: #eee;
+    color: #000 !important;
+}
+
+
+/** CSS*/
+
+html,
+body {
+    height: 100%;
+}
+
+
+/*
+body {
+	padding-top: 54px;
+	padding-bottom: 54px;
+}
+*/
+
+nav .dropdown {
+    display: inline-block;
+}
+
+
+/*
+@media (min-width: 992px) {
+	body {
+		padding-top: 56px;
+	}
+}
+*/
+
+
+/* Temporary navbar container fix */
+
+.navbar-toggler {
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    nav>.container {
+        width: 100%;
+    }
+}
+
+.lang-en nav .btn-en {
+    font-weight: bold;
+}
+
+.lang-slo nav .btn-slo {
+    font-weight: bold;
+}
+
+body .lang {
+    display: none;
+}
+
+body.lang-en .lang-en {
+    display: inline-block;
+}
+
+body.lang-slo .lang-slo {
+    display: inline-block;
+}
+
+.vjs-big-play-button {
+    margin-left: 38%;
+    margin-top: 42%;
+}
+
+.hidden {
+    display: none;
+}
+
