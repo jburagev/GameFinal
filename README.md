@@ -20,4 +20,9 @@ Note:
 If you have problems loading the game offline please use Google Chrome with Allow-Control-Allow-Origin: * extension installed and started.
 Allow-Control-Allow-Origin: * extenson link: https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en
 
+Use of Safari on Ipad:
+
+To play the game on Safari web browser you need to Disable Local File Restrictions here is tutorial how to disable it:
+Tutorial: https://support.apple.com/kb/PH21491?viewlocale=en_US&locale=en_AE
+
 Jovan Buragev
